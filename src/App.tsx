@@ -1,16 +1,25 @@
 import React from "react";
+import { Column } from "./Column";
+import { Card } from "./Card";
 import { AppContainer } from "./styles";
+import { AddNewItem } from "./AddNewItem";
 
-// const buttonStyles: React.CSSProperties = {
-//   backgroundColor: "#5aac44",
-//   borderRadius: "3px",
-//   border: "none",
-// };
-
-export function App() {
+export const App = () => {
   return (
     <AppContainer>
-      <p>Columns will go here</p>
+      <Column text="To Do">
+        <Card text="Generate App Scaffold" />
+      </Column>
+
+      <Column text="Progress">
+        <Card text="Learn TypeScript" />
+      </Column>
+
+      <Column text="Done">
+        <Card text="Begin to use static typing" />
+      </Column>
+
+      <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log} />
     </AppContainer>
   );
-}
+};
