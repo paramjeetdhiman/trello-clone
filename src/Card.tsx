@@ -2,6 +2,7 @@ import { CardContainer } from "./styles";
 
 type CardProps = {
   text: string;
+  id: string;
   // children?: React.ReactNode;
 };
 
